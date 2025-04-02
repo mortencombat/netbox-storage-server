@@ -15,7 +15,7 @@ build-backend = "hatchling.build"
 
 [tool.hatch.version]
 source = "vcs"
-raw-options = { version_scheme = "post-release" }
+raw-options = { version_scheme = "only-version", local_scheme = "no-local-version" }
 
 [dependency-groups]
 dev = [
