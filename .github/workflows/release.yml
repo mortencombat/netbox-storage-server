@@ -19,6 +19,11 @@ jobs:
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
+      - name: Debug git state
+        run: |
+          git log --oneline -n 5
+          git describe --tags
+          echo "Current ref: ${{ github.ref_name }}"
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
